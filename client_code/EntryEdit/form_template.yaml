@@ -15,6 +15,8 @@ components:
     properties: {}
     type: TextBox
     layout_properties: {grid_position: 'ZDEAEG,KZFNBF'}
+    data_bindings:
+    - {property: text, code: 'self.item[''initials'']', writeback: true}
   - name: lblScore
     properties: {text: 'Score:', role: title}
     type: Label
@@ -23,4 +25,6 @@ components:
     properties: {text: ''}
     type: TextBox
     layout_properties: {grid_position: 'RBCIOL,JDENMV'}
+    data_bindings:
+    - {property: text, code: 'self.item[''score'']', writeback: true}
 is_package: true

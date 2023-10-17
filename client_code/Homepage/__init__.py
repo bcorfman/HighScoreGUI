@@ -13,7 +13,7 @@ class Homepage(HomepageTemplate):
   def add_entry_button_click(self, **event_args):
     """This method is called when the button is clicked"""
     # Initialise an empty dictionary to store the user inputs
-    new_entry = dict(self.item)
+    new_entry = {}
     # Open an alert displaying the 'EntryEdit' Form
     save_clicked = alert(
       content=EntryEdit(item=new_entry),
@@ -23,8 +23,7 @@ class Homepage(HomepageTemplate):
     )
     # If the alert returned 'True', the save button was clicked.
     if save_clicked:
-      print(self.item['initials'], self.item['score'])
-      anvil.server.call('add_score', self.item['initials'], self.item['score'])
+      anvil.server.call('add_score', new_entry['initials'], new_entry['score'])
       self.refresh_entries()
     
   def refresh_entries(self):
