@@ -13,16 +13,16 @@ class Homepage(HomepageTemplate):
     # Initialise an empty dictionary to store the user inputs
     new_entry = {}
     # Open an alert displaying the 'EntryEdit' Form
-    #save_clicked = alert(
-    #  content=EntryEdit(item=new_entry),
-    #  title="Add Entry",
-    #  large=True,
-    #  buttons=[("Save", True), ("Cancel", False)]
-    #)
+    save_clicked = alert(
+      content=EntryEdit(item=new_entry),
+      title="Add High Score",
+      large=True,
+      buttons=[("Save", True), ("Cancel", False)]
+    )
     # If the alert returned 'True', the save button was clicked.
-    #if save_clicked:
-    #  anvil.server.call('add_entry', new_entry)
-    #  self.refresh_entries()
+    if save_clicked:
+      anvil.server.call(f'add_score?initials={initials}&score={score}', new_entry)
+      self.refresh_entries()
     
   def refresh_entries(self):
      # Load existing entries from the Data Table, 
