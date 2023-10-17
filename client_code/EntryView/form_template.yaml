@@ -1,6 +1,6 @@
 container:
   type: ColumnPanel
-  properties: {col_widths: '{}'}
+  properties: {col_widths: '{}', spacing_above: none, spacing_below: none}
 components:
 - type: ColumnPanel
   properties: {role: elevated-card, tooltip: '', border: '', foreground: '', visible: true,
@@ -33,3 +33,4 @@ components:
     name: spacer_2
     layout_properties: {grid_position: 'HMYERO,VZPSLI MHWRRD,UGUKIZ', full_width_row: false}
 is_package: true
+data_bindings: []

@@ -1,13 +1,11 @@
 from ._anvil_designer import HomepageTemplate
 from anvil import *
 import anvil.server
-from ..EntryEdit import EntryEdit
 
 class Homepage(HomepageTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
-]    # Any code you write here will run when the form opens.
     self.refresh_entries()
 
   def add_entry_button_click(self, **event_args):
@@ -31,7 +29,6 @@ class Homepage(HomepageTemplate):
      # and display them in the RepeatingPanel
      json = anvil.server.call('get_high_scores')
      self.entries_panel.items = json
-     for elem in self.entries_panel.items:
-       elem.
+
 
 
