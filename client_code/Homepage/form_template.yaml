@@ -10,6 +10,10 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
+  - name: lblHeader
+    properties: {text: High Score List, align: center, bold: true, font_size: 30}
+    type: Label
+    layout_properties: {grid_position: 'IAPQRP,KYXWFF'}
   - type: Spacer
     properties: {height: 32}
     name: spacer_2
@@ -33,7 +37,7 @@ components:
       tooltip: ''
       border: ''
       foreground: ''
-      rows_per_page: 20
+      rows_per_page: 10
       visible: true
       wrap_on: never
       show_page_controls: false
@@ -46,20 +50,9 @@ components:
       properties: {item_template: Homepage.RowTemplate1}
       type: RepeatingPanel
       layout_properties: {grid_position: 'OPQDUO,CMXXCJ', slot: footer}
-    layout_properties: {grid_position: 'ZWOMLY,OXIZWQ PMAHBJ,WPSIRD'}
+    layout_properties: {grid_position: 'ZWOMLY,OXIZWQ PMAHBJ,WPSIRD', full_width_row: false}
   - type: Spacer
     properties: {height: 239}
     name: spacer_1
     layout_properties: {grid_position: 'ZWOMLY,ATPISC'}
   data_bindings: []
-- type: FlowPanel
-  properties: {}
-  name: navbar_links
-  layout_properties: {slot: nav-right}
-- type: Label
-  properties: {role: title, align: left, tooltip: '', border: '', foreground: '',
-    visible: true, text: High score list, font_size: null, font: '', spacing_above: small,
-    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
-    underline: false, icon: ''}
-  name: label_1
-  layout_properties: {slot: title}

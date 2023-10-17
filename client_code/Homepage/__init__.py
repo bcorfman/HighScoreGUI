@@ -1,6 +1,8 @@
 from ._anvil_designer import HomepageTemplate
 from anvil import *
 import anvil.server
+from ..EntryEdit import EntryEdit
+
 
 class Homepage(HomepageTemplate):
   def __init__(self, **properties):
