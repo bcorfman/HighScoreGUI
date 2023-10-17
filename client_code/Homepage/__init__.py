@@ -21,7 +21,7 @@ class Homepage(HomepageTemplate):
     )
     # If the alert returned 'True', the save button was clicked.
     if save_clicked:
-      anvil.server.call(f'add_score?initials={initials}&score={score}', new_entry)
+      anvil.server.call('add_score', new_entry['initials'], new_entry['score'])
       self.refresh_entries()
     
   def refresh_entries(self):
