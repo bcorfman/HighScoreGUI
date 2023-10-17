@@ -28,7 +28,6 @@ class Homepage(HomepageTemplate):
      # Load existing entries from the Data Table, 
      # and display them in the RepeatingPanel
      json = anvil.server.call('get_high_scores')
-     self.entries_panel.items = json
-
-
+     self.panel.items = json
+    
 
