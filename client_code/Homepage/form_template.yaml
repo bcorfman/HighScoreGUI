@@ -17,12 +17,10 @@ components:
     name: add_entry_button
     layout_properties: {grid_position: 'CBFHGL,NKFPMX'}
     event_bindings: {click: add_entry_button_click}
-  - type: RepeatingPanel
-    properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
-      visible: true, spacing_above: small, spacing_below: small, item_template: EntryView,
-      background: ''}
-    name: entries_panel
-    layout_properties: {slot: title, grid_position: 'XRGDXR,JQCHKL'}
+  - name: data_row_panel_1
+    properties: {}
+    type: DataRowPanel
+    layout_properties: {grid_position: 'QADIHP,JXVPCE'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
