@@ -10,8 +10,8 @@ def add_score(initials, score):
 
 @anvil.server.callable
 def get_high_scores():
-  result = anvil.http.request(HIGHSCORE_SERVICE + '/high_scores', 'GET')
-  return result.json()
+  result = anvil.http.request(HIGHSCORE_SERVICE + '/high_scores', json=True)
+  return result
   
 @anvil.server.callable
 def clear_high_scores():
