@@ -1,7 +1,7 @@
 import anvil.http
 import anvil.server
 
-HIGHSCORE_SERVICE = "https://highscore-ibq0itxr.b4a.run"
+HIGHSCORE_SERVICE = "https://https://highscore1-1y492j9s.b4a.run"
 
 @anvil.server.callable
 def add_score(initials, score):
